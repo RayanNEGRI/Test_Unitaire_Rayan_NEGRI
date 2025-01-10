@@ -150,7 +150,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
                 Fight f = new Fight(null, mewtwo);
             });
         }
-#if false
+
         [Test]
         public void FightWithOneTurn()
         {
@@ -166,7 +166,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(bulbizarre.IsAlive, Is.EqualTo(true));
             Assert.That(f.IsFightFinished, Is.EqualTo(false));
         }
-
+#if false
         [Test]
         public void FightWithOneShotTurn()
         {
