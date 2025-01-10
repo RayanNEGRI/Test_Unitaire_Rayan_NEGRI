@@ -20,7 +20,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             // Character starts full life
             Assert.That(c.CurrentHealth, Is.EqualTo(100));
         }
-#if false
+
         [Test]
         public void EquipmentConstructor()
         {
@@ -30,7 +30,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(e.BonusDefense, Is.EqualTo(70));
             Assert.That(e.BonusSpeed, Is.EqualTo(12));
         }
-
+#if false
         [Test]
         public void CharacterEquipped()
         {
