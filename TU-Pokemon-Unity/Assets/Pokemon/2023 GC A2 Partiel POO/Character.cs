@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace _2023_GC_A2_Partiel_POO.Level_2
 {
@@ -34,9 +36,8 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// </summary>
         TYPE _baseType;
 
-        
 
-    public Character(int baseHealth, int baseAttack, int baseDefense, int baseSpeed, TYPE baseType)
+        public Character(int baseHealth, int baseAttack, int baseDefense, int baseSpeed, TYPE baseType)
         {
             _baseHealth = baseHealth;
             _baseAttack = baseAttack;
@@ -45,17 +46,21 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
             _baseType = baseType;
             CurrentHealth = baseHealth;
         }
+
         /// <summary>
         /// HP actuel du personnage
         /// </summary>
         public int CurrentHealth { get; private set; }
 
-
         public TYPE BaseType { get => _baseType;}
         /// <summary>
         /// HPMax, prendre en compte base et equipement potentiel
         /// </summary>
-        public int MaxHealth { get => _baseHealth; }
+        public int MaxHealth 
+        { 
+        get => _baseHealth;
+        //set => _baseHealth = value;
+        }
 
         /// <summary>
         /// ATK, prendre en compte base et equipement potentiel
@@ -64,7 +69,13 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// <summary>
         /// DEF, prendre en compte base et equipement potentiel
         /// </summary>
-        public int Defense { get => _baseDefense; }
+        public int Defense 
+        { 
+           get => _baseDefense;
+
+           //set => _baseDefense += value;
+        
+        }
         /// <summary>
         /// SPE, prendre en compte base et equipement potentiel
         /// </summary>
@@ -73,6 +84,7 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// Equipement unique du personnage
         /// </summary>
         public Equipment CurrentEquipment { get; private set; }
+
         /// <summary>
         /// null si pas de status
         /// </summary>
@@ -99,14 +111,25 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// <exception cref="ArgumentNullException">Si equipement est null</exception>
         public void Equip(Equipment newEquipment)
         {
-            throw new NotImplementedException();
+            if (CurrentEquipment == null)
+            {
+                CurrentEquipment = newEquipment;
+                _baseHealth += CurrentEquipment.BonusHealth;
+                _baseAttack += CurrentEquipment.BonusAttack;
+                _baseDefense += CurrentEquipment.BonusDefense;
+                _baseSpeed += CurrentEquipment.BonusSpeed;
+            }
         }
         /// <summary>
         /// Desequipe l'objet en cours au personnage
         /// </summary>
         public void Unequip()
         {
-            throw new NotImplementedException();
+            _baseHealth -= CurrentEquipment.BonusHealth;
+            _baseAttack -= CurrentEquipment.BonusAttack;
+            _baseDefense -= CurrentEquipment.BonusDefense;
+            _baseSpeed -= CurrentEquipment.BonusSpeed;
+            CurrentEquipment = null;
         }
 
     }

@@ -30,7 +30,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(e.BonusDefense, Is.EqualTo(70));
             Assert.That(e.BonusSpeed, Is.EqualTo(12));
         }
-#if false
+
         [Test]
         public void CharacterEquipped()
         {
@@ -57,7 +57,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(c.Speed, Is.EqualTo(20));
             Assert.That(c.BaseType, Is.EqualTo(TYPE.NORMAL));
         }
-
+#if false
         [Test]
         public void CharacterEquippedNullCheck()
         {
