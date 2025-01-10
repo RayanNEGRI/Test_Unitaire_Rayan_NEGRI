@@ -91,7 +91,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(pikachu.IsAlive, Is.EqualTo(false));
             // RIP Pikachu
         }
-#if false
+
         [Test]
         public void CharacterEquippedReceivePunch()
         {
@@ -121,6 +121,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             // RIP Pikachu
         }
 
+#if false
         [Test]
         public void FightConstructor()
         {
