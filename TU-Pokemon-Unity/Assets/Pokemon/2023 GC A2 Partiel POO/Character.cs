@@ -155,5 +155,9 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
             CurrentEquipment = null;
         }
 
+        internal void ReceiveAttack(Character character2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

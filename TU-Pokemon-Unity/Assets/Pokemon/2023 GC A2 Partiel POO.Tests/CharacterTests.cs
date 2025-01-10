@@ -166,7 +166,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(bulbizarre.IsAlive, Is.EqualTo(true));
             Assert.That(f.IsFightFinished, Is.EqualTo(false));
         }
-#if false
+
         [Test]
         public void FightWithOneShotTurn()
         {
@@ -184,6 +184,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(mewtwo.CurrentHealth, Is.EqualTo(mewtwo.MaxHealth));
             Assert.That(f.IsFightFinished, Is.EqualTo(true));
         }
+#if false
 #endif
     }
 

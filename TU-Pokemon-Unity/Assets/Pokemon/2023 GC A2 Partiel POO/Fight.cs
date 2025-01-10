@@ -35,6 +35,19 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
             {
                 IsFightFinished = true;
             }
+
+            //if (Character1.Speed >= Character2.Speed)
+            //{
+            //    Character1.ReceiveAttack(Character2);
+            //    Character2.ReceiveAttack(Character1);
+            //}
+            //else
+            //{
+            //    Character2.ReceiveAttack(Character1);
+            //    Character1.ReceiveAttack(Character2);
+            //}
+
+
         }
 
     }
