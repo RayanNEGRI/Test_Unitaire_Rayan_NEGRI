@@ -57,7 +57,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(c.Speed, Is.EqualTo(20));
             Assert.That(c.BaseType, Is.EqualTo(TYPE.NORMAL));
         }
-#if false
+
         [Test]
         public void CharacterEquippedNullCheck()
         {
@@ -68,7 +68,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
                 c.Equip(null);
             });
         }
-
+#if false
         [Test]
         public void CharacterReceivePunch()
         {

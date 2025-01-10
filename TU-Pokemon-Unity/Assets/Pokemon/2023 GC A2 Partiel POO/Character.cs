@@ -111,14 +111,16 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// <exception cref="ArgumentNullException">Si equipement est null</exception>
         public void Equip(Equipment newEquipment)
         {
+            //if (CurrentEquipment == null) throw new Exception("Erreur la valeur ne peux être null");
             if (CurrentEquipment == null)
             {
-                CurrentEquipment = newEquipment;
-                _baseHealth += CurrentEquipment.BonusHealth;
-                _baseAttack += CurrentEquipment.BonusAttack;
-                _baseDefense += CurrentEquipment.BonusDefense;
-                _baseSpeed += CurrentEquipment.BonusSpeed;
+                throw new ArgumentNullException("Erreur la valeur ne peux être null");
             }
+            CurrentEquipment = newEquipment;
+            _baseHealth += CurrentEquipment.BonusHealth;
+            _baseAttack += CurrentEquipment.BonusAttack;
+            _baseDefense += CurrentEquipment.BonusDefense;
+            _baseSpeed += CurrentEquipment.BonusSpeed;
         }
         /// <summary>
         /// Desequipe l'objet en cours au personnage
