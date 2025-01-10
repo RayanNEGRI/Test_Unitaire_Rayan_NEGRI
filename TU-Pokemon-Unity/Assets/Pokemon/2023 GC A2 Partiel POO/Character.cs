@@ -5,6 +5,12 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
     /// <summary>
     /// Définition d'un personnage
     /// </summary>
+    /// 
+    public enum TYPE
+    {
+        NORMAL,
+    }
+
     public class Character
     {
         /// <summary>
@@ -28,59 +34,41 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// </summary>
         TYPE _baseType;
 
-        public Character(int baseHealth, int baseAttack, int baseDefense, int baseSpeed, TYPE baseType)
+        
+
+    public Character(int baseHealth, int baseAttack, int baseDefense, int baseSpeed, TYPE baseType)
         {
             _baseHealth = baseHealth;
             _baseAttack = baseAttack;
             _baseDefense = baseDefense;
             _baseSpeed = baseSpeed;
             _baseType = baseType;
+            CurrentHealth = baseHealth;
         }
         /// <summary>
         /// HP actuel du personnage
         /// </summary>
         public int CurrentHealth { get; private set; }
+
+
         public TYPE BaseType { get => _baseType;}
         /// <summary>
         /// HPMax, prendre en compte base et equipement potentiel
         /// </summary>
-        public int MaxHealth
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int MaxHealth { get => _baseHealth; }
+
         /// <summary>
         /// ATK, prendre en compte base et equipement potentiel
         /// </summary>
-        public int Attack
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Attack { get => _baseAttack; }
         /// <summary>
         /// DEF, prendre en compte base et equipement potentiel
         /// </summary>
-        public int Defense
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Defense { get => _baseDefense; }
         /// <summary>
         /// SPE, prendre en compte base et equipement potentiel
         /// </summary>
-        public int Speed
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Speed { get => _baseSpeed; }
         /// <summary>
         /// Equipement unique du personnage
         /// </summary>

@@ -28,22 +28,22 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
     /// <summary>
     /// Boule de feu qui ajoute le statut BURN
     /// </summary>
-    public class FireBall : Skill
-    {
-        public FireBall() : base(TYPE.FIRE, 50, StatusPotential.BURN) { }
-    }
-    /// <summary>
-    /// Attaque eau basique
-    /// </summary>
-    public class WaterBlouBlou : Skill
-    {
-        public WaterBlouBlou() : base(TYPE.WATER, 20, StatusPotential.NONE) { }
-    }
-    /// <summary>
-    /// Attaque plante qui inflige le statut SLEEP
-    /// </summary>
-    public class MagicalGrass : Skill
-    {
-        public MagicalGrass() : base(TYPE.GRASS, 70, StatusPotential.SLEEP) { }
-    }
+    //public class FireBall : Skill
+    //{
+    //    public FireBall() : base(TYPE.FIRE, 50, StatusPotential.BURN) { }
+    //}
+    ///// <summary>
+    ///// Attaque eau basique
+    ///// </summary>
+    //public class WaterBlouBlou : Skill
+    //{
+    //    public WaterBlouBlou() : base(TYPE.WATER, 20, StatusPotential.NONE) { }
+    //}
+    ///// <summary>
+    ///// Attaque plante qui inflige le statut SLEEP
+    ///// </summary>
+    //public class MagicalGrass : Skill
+    //{
+    //    public MagicalGrass() : base(TYPE.GRASS, 70, StatusPotential.SLEEP) { }
+    //}
 }
