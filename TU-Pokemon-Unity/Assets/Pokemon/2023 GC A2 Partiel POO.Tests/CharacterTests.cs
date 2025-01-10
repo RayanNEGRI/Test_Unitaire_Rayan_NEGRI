@@ -133,7 +133,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
             Assert.That(f.Character2, Is.EqualTo(mewtwo));
             Assert.That(f.IsFightFinished, Is.EqualTo(false));
         }
-#if false
+
         [Test]
         public void CreateFightNullCheck()
         {
@@ -150,7 +150,7 @@ namespace _2023_GC_A2_Partiel_POO.Tests.Level_2
                 Fight f = new Fight(null, mewtwo);
             });
         }
-
+#if false
         [Test]
         public void FightWithOneTurn()
         {

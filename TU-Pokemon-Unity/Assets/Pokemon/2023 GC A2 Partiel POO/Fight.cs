@@ -9,6 +9,11 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         {
             Character1 = character1;
             Character2 = character2;
+
+            if (character1 == null || character2 == null)
+            {
+                throw new ArgumentNullException("Erreur la valeur d'un des deux pokemon est manquante");
+            }
         }
 
         public Character Character1 { get; }
