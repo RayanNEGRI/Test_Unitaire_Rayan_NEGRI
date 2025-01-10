@@ -36,6 +36,11 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// </summary>
         TYPE _baseType;
 
+        //enemy
+        TYPE _enemyType;
+        int _enemyAttack;
+        StatusPotential _enemyState;
+
 
         public Character(int baseHealth, int baseAttack, int baseDefense, int baseSpeed, TYPE baseType)
         {
@@ -90,7 +95,7 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// </summary>
         public StatusEffect CurrentStatus { get; private set; }
 
-        public bool IsAlive => throw new NotImplementedException();
+        public bool IsAlive { get; set; } = true;
 
 
         /// <summary>
@@ -102,7 +107,22 @@ namespace _2023_GC_A2_Partiel_POO.Level_2
         /// <exception cref="NotImplementedException"></exception>
         public void ReceiveAttack(Skill s)
         {
-            throw new NotImplementedException();
+            //enemy
+            _enemyType = s.Type;
+            _enemyAttack = s.Power;
+            _enemyState = s.Status;
+
+            CurrentHealth = CurrentHealth - (_enemyAttack - _baseDefense);
+
+            if(CurrentHealth < 0)
+            {
+                CurrentHealth = 0;
+            }
+
+            if (CurrentHealth <= 0)
+            {
+                IsAlive = false;
+            }
         }
         /// <summary>
         /// Equipe un objet au personnage
